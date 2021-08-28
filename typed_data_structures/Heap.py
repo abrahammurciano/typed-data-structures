@@ -53,10 +53,6 @@ class Heap(Generic[T]):
 		"""
 		return [node[-1] for node in self.__heap_list]
 
-	def show(self):
-		"""Print the items in the heap."""
-		print(*self.items())
-
 	def peek(self) -> T:
 		"""Get the first item from the heap without extracting it.
 
@@ -73,6 +69,9 @@ class Heap(Generic[T]):
 
 	def __bool__(self):
 		return bool(self.__heap_list)
+
+	def __contains__(self, item: T) -> bool:
+		return item in self.items()
 
 	def __heap_node(self, item: T, key: Any = None) -> Tuple[Any, int, T]:
 		"""Create a comparable tuple that can be inserted into the heap's list.
