@@ -1,5 +1,5 @@
 """
-__version__.py
+info.py
 ~~~~~~~~~~~~~~
 
 Information about the current version of the typed-data-structures package.

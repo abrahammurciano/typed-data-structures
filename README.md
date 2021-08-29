@@ -9,3 +9,7 @@ To install the package, run the following command.
 ```
 pip install typed_data_structures
 ```
+
+## Documentation
+
+Click [here](https://github.com/) to view the documentation.
