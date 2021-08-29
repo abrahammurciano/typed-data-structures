@@ -12,4 +12,4 @@ pip install typed_data_structures
 
 ## Documentation
 
-Click [here](https://abrahammurciano.github.io/typed-data-structures/_build/html) to view the documentation.
+Click [here](https://abrahammurciano.github.io/typed-data-structures/html) to view the documentation.
