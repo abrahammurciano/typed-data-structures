@@ -35,4 +35,5 @@ setup(
 		"Programming Language :: Python :: 3.7",
 	],
 	keywords="generic typed data structures heap stack queue",
+	package_data={"typed_data_structures": ["py.typed"]},
 )
