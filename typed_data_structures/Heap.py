@@ -1,10 +1,21 @@
-from typing import Any, Callable, Generic, Iterable, List, Tuple, TypeVar
+from typing import (
+	Any,
+	Callable,
+	Collection,
+	Generic,
+	Iterable,
+	Iterator,
+	List,
+	Optional,
+	Tuple,
+	TypeVar,
+)
 import heapq
 
 T = TypeVar("T")
 
 
-class Heap(Generic[T]):
+class Heap(Generic[T], Collection[T]):
 	"""A heap (aka priority queue) data structure.
 
 	Args:
@@ -45,14 +56,6 @@ class Heap(Generic[T]):
 		"""
 		return heapq.heappop(self.__heap_list)[-1]
 
-	def items(self) -> List[T]:
-		"""Get the items in the heap.
-
-		Returns:
-			List[T]: The items in the heap.
-		"""
-		return [node[-1] for node in self.__heap_list]
-
 	def peek(self) -> T:
 		"""Get the first item from the heap without extracting it.
 
@@ -70,8 +73,11 @@ class Heap(Generic[T]):
 	def __bool__(self):
 		return bool(self.__heap_list)
 
-	def __contains__(self, item: T) -> bool:
-		return item in self.items()
+	def __contains__(self, item: object) -> bool:
+		return item in list(self)
+
+	def __iter__(self) -> Iterator[T]:
+		return (node[-1] for node in self.__heap_list)
 
 	def __heap_node(self, item: T, key: Any = None) -> Tuple[Any, int, T]:
 		"""Create a comparable tuple that can be inserted into the heap's list.

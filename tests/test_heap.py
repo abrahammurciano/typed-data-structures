@@ -5,11 +5,11 @@ import pytest
 class TestHeap:
 	@pytest.fixture
 	def empty_heap(self) -> Heap[int]:
-		return Heap()
+		return Heap[int]()
 
 	@pytest.fixture
 	def abs_heap(self) -> Heap[int]:
-		return Heap([3, -2, -6, 1, 7, -4, 5, -8, 0, 9], abs)
+		return Heap[int]([3, -2, -6, 1, 7, -4, 5, -8, 0, 9], abs)
 
 	def test_push(self, abs_heap: Heap[int], empty_heap: Heap[int]):
 		assert len(empty_heap) == 0

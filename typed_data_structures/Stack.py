@@ -1,12 +1,4 @@
-from typing import (
-	Collection,
-	Generic,
-	Iterable,
-	Iterator,
-	List,
-	Reversible,
-	TypeVar,
-)
+from typing import Collection, Generic, Iterable, Iterator, Reversible, TypeVar
 
 
 T = TypeVar("T")

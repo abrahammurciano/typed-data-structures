@@ -7,3 +7,4 @@ The typed_data_structures package - A collection of data structures with proper 
 
 from .Heap import Heap
 from .Stack import Stack
+from .Queue import Queue

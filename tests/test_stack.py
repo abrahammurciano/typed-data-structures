@@ -1,17 +1,8 @@
-"""
-tests.test_stack.py
-~~~~~~~~~~~~~~~~~~~~
-
-Test suite for the Stack.py module.
-"""
-
 import pytest
 from typed_data_structures import Stack
 
 
 class TestStack:
-	"""Test suite for SupplyCurve class."""
-
 	@pytest.fixture
 	def empty_stack(self) -> Stack[int]:
 		return Stack[int]()
@@ -50,7 +41,7 @@ class TestStack:
 		assert 3 in empty_stack
 
 	def test_reversed(self, stack_to_ten: Stack[int]):
-		assert list(reversed(stack_to_ten)), list(range(10, 1, -1))
+		assert list(reversed(stack_to_ten)) == list(range(9, -1, -1))
 
 	def test_iter(self, stack_to_ten: Stack[int]):
 		i = 0
