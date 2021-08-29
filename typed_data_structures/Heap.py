@@ -68,11 +68,6 @@ class Heap(Generic[T], Collection[T]):
 		return self.__heap_list[0][-1]
 
 	def __len__(self) -> int:
-		"""Get the number of elements in the heap.
-
-		Returns:
-			int: The number of elements in the heap.
-		"""
 		return len(self.__heap_list)
 
 	def __bool__(self):
